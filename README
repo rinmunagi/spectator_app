@@ -13,7 +13,9 @@ There has the demonstration and the tutorial in the YouTube video.
 https://youtu.be/XFsRj6JVx_E
 
 ## Requirement
-
+Python : 2.7.15
+Tensorflow : 1.12.0
+OS : Ubuntu 16.04, 18.04
 
 ## Usage
 ./execute
