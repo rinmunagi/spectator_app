@@ -1,4 +1,4 @@
-prefix=/home/lea/rcss
+prefix=/home/suzuki/rcss/situationscore/spectator_app/soccerwindow
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include

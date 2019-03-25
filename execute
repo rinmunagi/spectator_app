@@ -3,7 +3,7 @@
 
 DIR=`dirname $0`
 
-LIBPATH=$HOME/rcss/lib
+LIBPATH=$DIR/soccerwindow/lib
 if [ x"$LIBPATH" != x ]; then
   if [ x"$LD_LIBRARY_PATH" = x ]; then
     LD_LIBRARY_PATH=$LIBPATH
@@ -17,5 +17,5 @@ DEFAULT_OPTS="-c -d"
 IMAGE_OPTS="--hide-score-board --hide-player-number --hide-view-area --hide-pointto --hide-stamina --hide-team-grahip --hide-card --enlarge-mode --player-size 2 --ball-size 1.3 --geometry=280x167+1+1"
 
 $DIR/soccerwindow/bin/soccerwindow2-qt4 $DEFAULT_OPTS $IMAGE_OPTS $@ &
-$HOME/rcss/bin/soccerwindow2 -c &
+$DIR/soccerwindow/bin/soccerwindow2 -c &
 python $DIR/spectator/src/spectator_server.py
