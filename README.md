@@ -14,7 +14,7 @@ The demonstration and the tutorial are shown in the [YouTube](https://youtu.be/X
 ## Requirement
 Python : 2.7.15  
 Tensorflow : 1.12.0  
-OS : Ubuntu 16.04, 18.04  
+OS : Ubuntu 
 
 ## Install
 git clone http://github.com/rinmunagi/spectator_app
@@ -27,7 +27,7 @@ make
 cd ../  
 ./execute  
 
-start the server, and connect the soccerwindows to server.  
+start the server, and connect the soccerwindows to the server.  
 run the team scripts and kickoff.  
 
 ## Licence
