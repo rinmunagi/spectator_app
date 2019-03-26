@@ -23,12 +23,12 @@ git clone http://github.com/rinmunagi/spectator_app
 ## Usage
 cd ./soccerwindow  
 ./bootstrap  
-./configure --with-ibrcsc=/write/the/path/to/spectator_app/soccerwindow  
+./configure 
 make  
 cd ../  
 ./execute  
 
-start the server, and connect the soccerwindows to the server.  
+start the server, and connect **the both soccerwindows** to the server.  
 run the team scripts and kickoff.  
 
 ## Licence
