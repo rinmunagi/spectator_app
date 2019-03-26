@@ -33,7 +33,7 @@ cd ../
 start the server, and connect **the both soccerwindows** to the server.  
 run the team scripts and kickoff.  
 
-## Licence
+## Licene
 [MIT](https://github.com/rinmunagi/spectator_app/blob/master/LICENSE)
 
 
