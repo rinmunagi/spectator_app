@@ -15,6 +15,7 @@ The demonstration and the tutorial are shown in the [YouTube](https://youtu.be/X
 Python : 2.7.15  
 Tensorflow : 1.12.0  
 OS : Ubuntu 
+rcssserver : https://github.com/rcsoccersim/rcssserver
 
 ## Install
 git clone http://github.com/rinmunagi/spectator_app
