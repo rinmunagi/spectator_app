@@ -22,7 +22,8 @@ The demonstration and the tutorial are shown in the [YouTube](https://youtu.be/X
 git clone http://github.com/rinmunagi/spectator_app
 ```
 ## Usage
-```cd ./soccerwindow  
+```
+cd ./soccerwindow  
 ./bootstrap  
 ./configure 
 make  
