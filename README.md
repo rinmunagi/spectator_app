@@ -18,8 +18,9 @@ OS : Ubuntu
 rcssserver : https://github.com/rcsoccersim/rcssserver
 
 ## Install
+```
 git clone http://github.com/rinmunagi/spectator_app
-
+```
 ## Usage
 ```cd ./soccerwindow  
 ./bootstrap  
@@ -32,7 +33,6 @@ start the server, and connect **the both soccerwindows** to the server.
 run the team scripts and kickoff.  
 
 ## Licence
-
 [MIT](https://github.com/rinmunagi/spectator_app/blob/master/LICENSE)
 
 
