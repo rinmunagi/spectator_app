@@ -12,10 +12,10 @@ The aim of the extension is to make the experience of watching games more entert
 The demonstration and the tutorial are shown in the [YouTube](https://youtu.be/XFsRj6JVx_E).
 
 ## Requirement
-Python : 2.7.15  
-Tensorflow : 1.12.0  
-OS : Ubuntu  
-rcssserver : https://github.com/rcsoccersim/rcssserver
+- Python : 2.7.15  
+- Tensorflow : 1.12.0  
+- OS : Ubuntu  
+- rcssserver : https://github.com/rcsoccersim/rcssserver
 
 ## Install
 ```
