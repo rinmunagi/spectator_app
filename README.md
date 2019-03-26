@@ -37,9 +37,9 @@ run the team scripts and kickoff.
 
 
 ## Author
-Yudai Suzuki (Osaka Prefecture University)  
-Takuya Fukushima (Osaka Prefecture University)  
-Lea Thibout (Osaka Prefecture University)  
-Tomoharu Nakashima (Osaka Prefecture University)  
-Hidehisa Akiyama (Fukuoka University)  
+- Yudai Suzuki (Osaka Prefecture University)  
+- Takuya Fukushima (Osaka Prefecture University)  
+- Lea Thibout (Osaka Prefecture University)  
+- Tomoharu Nakashima (Osaka Prefecture University)  
+- Hidehisa Akiyama (Fukuoka University)  
 
