@@ -5,7 +5,7 @@
 ================================
 
 ## Overview  
-The spectator app. is developed for extension to a soccer monitor that is used in RoboCup soccer simulation 2D league. 
+The Spectator App. is developed for extension to a soccer monitor that is used in RoboCup soccer simulation 2D league. 
 The aim of the extension is to make the experience of watching games more entertaining. 
 
 ## Demo
@@ -33,7 +33,7 @@ run the team scripts and kickoff.
 
 ## Licence
 
-[MIT](https://github.com/rinmunagi/spectator_app/LICENSE)
+[MIT](https://github.com/rinmunagi/spectator_app/blob/master/LICENSE)
 
 
 ## Author
