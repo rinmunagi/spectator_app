@@ -33,7 +33,7 @@ run the team scripts and kickoff.
 
 ## Licence
 
-[MIT](https://github.com/rinmunagi/spectator_app/LICENCE)
+[MIT](https://github.com/rinmunagi/spectator_app/LICENSE)
 
 
 ## Author
