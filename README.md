@@ -30,8 +30,9 @@ make
 cd ../  
 ./execute  
 ```
-Start the server, and connect **the both soccerwindows** to the server.  
-Run the team scripts and kickoff.  
+The three windows (the two soccerwindows and the SituationScore window) are launched.  
+Start the rcssserver, and connect **the both soccerwindows** to the server.  
+Run the team scripts and 'KickOff'.  
 
 ## License
 [MIT](https://github.com/rinmunagi/spectator_app/blob/master/LICENSE)
