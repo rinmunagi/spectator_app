@@ -9,7 +9,7 @@ The Spectator App. is developed for extension to a soccer monitor that is used i
 The aim of the extension is to make the experience of watching games more entertaining. 
 
 This app. uses these softwares.  
-- [soccerwindow2](https://ja.osdn.net/projects/rctools/downloads/68532/soccerwindow2-5.1.1.tar.gz/)  
+- [soccerwindow2](https://ja.osdn.net/projects/rctools/releases/68532/)  
 - [librcsc](https://ja.osdn.net/projects/rctools/downloads/51941/librcsc-4.1.0.tar.gz/)  
 
 ## Demonstration
