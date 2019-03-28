@@ -17,7 +17,7 @@ The demonstration and the tutorial are shown in the [YouTube](https://youtu.be/X
 - tool
   - [rcssserver](https://github.com/rcsoccersim/rcssserver)  
   - [soccerwindow2-screenshot](https://github.com/rinmunagi/soccerwindow2-screenshot)  
--library
+- library
   - Python : 2.7.15  
   - Tensorflow : 1.12.0  
   - PyQt4
