@@ -17,6 +17,8 @@ The demonstration and the tutorial are shown in the [YouTube](https://youtu.be/X
 - [soccerwindow2-screenshot](https://github.com/rinmunagi/soccerwindow2-screenshot)  
 - Python : 2.7.15  
 - Tensorflow : 1.12.0  
+- PyQt4
+- opencv-python
 
 ## Install
 ```
