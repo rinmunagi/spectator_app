@@ -1,3 +1,0 @@
-#! /bin/sh
-
-soccerwindow2 -c -d $*
