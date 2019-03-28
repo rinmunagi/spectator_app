@@ -1,8 +1,8 @@
-================================
+=====================================
 
 #  __THE SPECTATOR APP.__
 
-================================
+=====================================
 
 ## Overview  
 The Spectator App. is developed for extension to a soccer monitor that is used in RoboCup soccer simulation 2D league. 
