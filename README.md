@@ -21,7 +21,7 @@ The demonstration and the tutorial are shown in the [YouTube](https://youtu.be/X
   - Python : 2.7.15  
   - Tensorflow : 1.12.0  
   - PyQt4
-  - opencv-python
+  - opencv2
 
 ## Install
 ```
