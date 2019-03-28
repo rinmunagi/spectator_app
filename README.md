@@ -22,8 +22,8 @@ The demonstration and the tutorial are shown in the [YouTube](https://youtu.be/X
 ```
 git clone http://github.com/rinmunagi/spectator_app
 ```
-Install the [soccerwindow2-screenshot](https://github.com/rinmunagi/soccerwindow2-screenshot) in the spectator_app directory.   
-If librcsc isn't installed in the system directory, please change the path in the script 'execute'.
+Install the [soccerwindow2-screenshot](https://github.com/rinmunagi/soccerwindow2-screenshot) in the 'spectator_app' directory.   
+If librcsc isn't installed in the system directory, please change the path of it in the script 'execute'.
 ```  
 LIBPATH=usr/local/lib -> /path/to/the/lib
 ```  
