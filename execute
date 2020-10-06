@@ -2,7 +2,7 @@
 
 DIR=`dirname $0`
 
-LIBPATH=usr/local/lib #! /path/to/librcsc/lib
+LIBPATH= #! /path/to/librcsc/lib
 if [ x"$LIBPATH" != x ]; then
   if [ x"$LD_LIBRARY_PATH" = x ]; then
     LD_LIBRARY_PATH=$LIBPATH
@@ -13,8 +13,8 @@ if [ x"$LIBPATH" != x ]; then
 fi
 
 DEFAULT_OPTS="-c -d"
-IMAGE_OPTS="--hide-score-board --hide-player-number --hide-view-area --hide-pointto --hide-stamina --hide-team-grahpic --hide-card --enlarge-mode --player-size 2 --ball-size 1.3 --geometry=280x167+1+1"
+IMAGE_OPTS="--hide-score-board --hide-player-number --hide-view-area --hide-pointto --hide-stamina --hide-team-grahip --hide-card --enlarge-mode --player-size 2 --ball-size 1.3 --geometry=280x167+1+1"
 
 $DIR/soccerwindow2-screenshot/bin/soccerwindow2-qt4 $DEFAULT_OPTS $IMAGE_OPTS $@ &
-$DIR/soccerwindow2-screenshot/bin/soccerwindow2 -c &
+rcssmonitor -c &
 python $DIR/spectator/src/spectator_server.py

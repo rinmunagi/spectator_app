@@ -1,5 +1,5 @@
 from scipy import misc
-import tkinter as tk
+# import Tkinter as tk
 import glob
 import numpy as np
 import time
@@ -12,9 +12,10 @@ import shutil
 import os
 import socket as sct
 from tensorflow.python.framework import graph_util
-from PyQt4 import QtTest
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt5 import QtTest
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
 import threading
 from multiprocessing import Value
 import subprocess
