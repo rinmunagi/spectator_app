@@ -60,7 +60,15 @@ class MyMainWindow(QMainWindow):
             palette.setColor(QPalette.Background,QColor(0, 0, 0))
 
         self.setPalette(palette)
-        label = QLabel('<p><font size="128"><center>'+str(sscore.value)+'</center></font></p>')
+        displayed_sscore = str(sscore.value)
+
+        if "-" in str(sscore.value):
+            displayed_sscore = displayed_sscore.replace("-", "&lt;&lt; ")
+        elif displayed_sscore == "0":
+            pass
+        else:
+            displayed_sscore += " &gt;&gt;"
+        label = QLabel('<p><font size="128"><center>'+displayed_sscore+'</center></font></p>')
         self.setCentralWidget(label)
 
     def playAudienceSound(self):
@@ -92,7 +100,8 @@ def calcSituationScore(sscore, model_dir, sound_dir):
         type : communication type (SOCK_STREAM : connection-based service, TCP socket)
         return -1 if fail. """
         socket = sct.socket(sct.AF_INET, sct.SOCK_STREAM)
-        socket.bind(('', 15555))
+        # 2020-10-30: fukushima ""->"127.0.0.1"
+        socket.bind(('127.0.0.1', 15555))
 
 
         # We load the values of variables from the graph
@@ -102,7 +111,8 @@ def calcSituationScore(sscore, model_dir, sound_dir):
                 # Enable a server to accept connection.
                 #   queuelen : integer, number of active participants that can wait for a connection
                 #   return 0 if listeningm -1 if error
-                socket.listen(5)
+                # 2020-10-30: fukushima 5->1
+                socket.listen(1)
 
                 # client, addr = socket.accept()
                 #   Accept a connection. Return a tuple.
@@ -118,14 +128,21 @@ def calcSituationScore(sscore, model_dir, sound_dir):
                 dirname = client.recv(4096)
 
                 # We create a directory to move the image already evaluated
-                if not os.path.exists(dirname + "-Done"):
-                    os.mkdir(dirname + "-Done")
+                dest = dirname + "-Done"
+                if not os.path.exists(dest):
+                    os.mkdir(dest)
 
                 #Image directory
                 validation_images = []
-                for image_name in glob.glob(dirname + "/*"):
-                    validation_images.append(image_name)
 
+                # for image_name in sorted(glob.glob(dirname + "/*")):
+                #   validation_images.append(image_name)
+                # 2020-10-30:fukushima modified
+                image_name_list = sorted(glob.glob(dirname + "/*"))
+                if len(image_name_list) == 0:
+                    continue
+                validation_images.append(image_name_list[-1])
+                ###
                 L = len(validation_images)
 
                 total_logits = [0.0 for i in range(L)]
@@ -146,7 +163,17 @@ def calcSituationScore(sscore, model_dir, sound_dir):
                     # sess.run return the first parameter, here logits
                     # 'Placeholder:0': batch = data
                     # 'Placeholder_3:0':False = not training
-                    batch_logits = sess.run('logits/BiasAdd:0', feed_dict={'Placeholder:0': batch, 'Placeholder_3:0':False})
+                    try:
+                        batch_logits = sess.run('logits/BiasAdd:0', feed_dict={'Placeholder:0': batch, 'Placeholder_3:0':False})
+                    except ValueError:
+                        print("image:{} something wrong. skip...".format(im))
+                        # We move this image
+                        try:
+                            shutil.move(im,dest)
+                            #print ("Move")
+                        except:
+                            print ("Move error")
+                        continue
 
                     if batch_logits < 100:
                         total_logits[i] = int(round(batch_logits)) - 100
@@ -156,8 +183,6 @@ def calcSituationScore(sscore, model_dir, sound_dir):
                         total_logits[i] = int(round(batch_logits)) - 99
                         if total_logits[i] > 100:
                             total_logits[i] = 100
-
-                    dest = dirname + "-Done"
 
                     # We move the image already evaluated
                     try:
