@@ -1,7 +1,7 @@
 #! /bin/sh
 
 DIR=`dirname $0`
-HOST=127.0.0.1
+HOST=192.168.1.2
 
 LIBPATH=/usr/local/lib #! /path/to/librcsc/lib
 if [ x"$LIBPATH" != x ]; then
@@ -15,6 +15,7 @@ fi
 
 IMAGE_OPTS="--hide-score-board --hide-player-number --hide-view-area --hide-pointto --hide-stamina --hide-team-grahip --hide-card --enlarge-mode --player-size 2 --ball-size 1.3 --geometry=280x167+1+1"
 
-$DIR/soccerwindow2-screenshot/bin/soccerwindow2-qt4 --host $HOST --connect --auto-reconnect-mode $IMAGE_OPTS $@ &
-rcssmonitor --server-host $HOST  --connect --auto-reconnect-mode on &
-python $DIR/spectator/src/spectator_server.py
+python $DIR/spectator/src/spectator_server.py &
+sleep 3
+$DIR/soccerwindow2-screenshot/bin/soccerwindow2-qt --host $HOST --connect --auto-reconnect-mode $IMAGE_OPTS $@ &
+rcssmonitor --server-host $HOST  --connect --auto-reconnect-mode on 
