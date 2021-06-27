@@ -13,15 +13,15 @@ The demonstration and the tutorial are shown in the [YouTube](https://youtu.be/J
 
 ## Requirement
 - OS
-  - Ubuntu 
+  - Ubuntu or MacOS BigSur
 - tool
   - [rcssserver](https://github.com/rcsoccersim/rcssserver)  
   - [soccerwindow2-screenshot](https://github.com/rinmunagi/soccerwindow2-screenshot)  
 - library
-  - Python 2.7.15  
+  - Python 3.6  
   - Tensorflow 1.12.0  
-  - PyQt4
-  - opencv2
+  - PyQt5
+  - opencv2.4.11
 
 ## Install
 ```
@@ -32,6 +32,10 @@ If librcsc isn't installed in the system directory, please change the path of it
 ```  
 LIBPATH=usr/local/lib -> /path/to/the/lib
 ```  
+Download [model.pb](https://www.dropbox.com/s/3wvz99qx91hsoc4/model.pb?dl=0) and place it on 
+```
+/path/to/spectator_app/spectator/src/model/model.pb
+```
 ## Usage
 ```
 ./execute  
